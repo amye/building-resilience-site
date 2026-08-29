@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: amye/building-resilience-site                  # Replace with your repo path
+  branch: main                                         # Or master/gh-pages
+
+media_folder: "assets/images"                          # Where uploaded images go
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/home.json"
+        label: "Home Page Content"
+        name: "home"
+        fields:
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subheadline", name: "subheadline", widget: "text" }
+          - { label: "Bio Text", name: "bio", widget: "markdown" }
+
+  - name: "blog"
+    label: "Insights"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
