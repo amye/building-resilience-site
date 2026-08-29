@@ -5,9 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Building Resilience | Executive Coaching & Leadership</title>
   
+  <!-- Favicon Package -->
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png" />
+<link rel="shortcut icon" href="/assets/images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#0f172a" /> 
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Typography Plugin (for Decap CMS markdown rendering) -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   
+  <!-- Google Fonts: Inter & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -22,15 +33,15 @@
           },
           colors: {
             brand: {
-              50: '#f6f7f6',
-              100: '#e3e7e4',
-              700: '#2d4036',
-              800: '#1e2d25',
-              900: '#141e19',
+              50: '#f4f6f8',
+              100: '#e3e8ee',
+              700: '#1e293b',
+              800: '#0f172a',
+              900: '#0b1120',
             },
             accent: {
-              500: '#c28e5d',
-              600: '#a67344',
+              500: '#ff6f61',
+              600: '#e05648',
             }
           }
         }
@@ -38,74 +49,81 @@
     }
   </script>
 
+  <!-- Netlify Identity Widget for Decap CMS Invite Redirects -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
-<body class="bg-brand-50 text-stone-800 antialiased font-sans">
+<body class="bg-brand-50 text-slate-800 antialiased font-sans">
 
-  <header class="sticky top-0 z-50 bg-brand-50/90 backdrop-blur-md border-b border-stone-200/60">
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-brand-50/90 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#" class="font-serif text-xl font-semibold text-brand-900 tracking-tight">
         Building Resilience
       </a>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
-        <a href="#about" class="hover:text-brand-700 transition-colors">About</a>
-        <a href="#framework" class="hover:text-brand-700 transition-colors">Framework</a>
-        <a href="#services" class="hover:text-brand-700 transition-colors">Services</a>
-        <a href="#contact" class="px-4 py-2 rounded-full bg-brand-800 text-stone-100 hover:bg-brand-700 transition-colors">
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-brand-800 transition-colors">About</a>
+        <a href="#framework" class="hover:text-brand-800 transition-colors">Framework</a>
+        <a href="#services" class="hover:text-brand-800 transition-colors">Services</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
           Get in Touch
         </a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="max-w-6xl mx-auto px-6 pt-20 pb-24 md:pt-32 md:pb-36">
     <div class="max-w-3xl">
-      <span class="text-xs uppercase tracking-widest font-semibold text-accent-600">Executive & Career Coaching</span>
+      <span class="text-xs uppercase tracking-widest font-semibold text-accent-500">Executive & Career Coaching</span>
       <h1 class="mt-4 font-serif text-4xl sm:text-5xl md:text-6xl text-brand-900 font-medium leading-tight">
         Cultivate sustainable clarity in high-pressure roles.
       </h1>
-      <p class="mt-6 text-lg sm:text-xl text-stone-600 font-light leading-relaxed">
+      <p class="mt-6 text-lg sm:text-xl text-slate-600 font-light leading-relaxed">
         Evidence-backed frameworks designed to help leaders, software engineers, and founders navigate complexity, prevent burnout, and build enduring mental resilience.
       </p>
       <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-        <a href="#contact" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg bg-brand-800 text-white font-medium hover:bg-brand-700 transition-colors shadow-sm">
+        <a href="#contact" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
           Schedule Consultation
         </a>
-        <a href="#framework" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg border border-stone-300 text-stone-700 font-medium hover:bg-stone-100 transition-colors">
+        <a href="#framework" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg border border-slate-300 text-brand-800 font-medium hover:bg-white transition-colors">
           Explore the Approach
         </a>
       </div>
     </div>
   </section>
 
-  <section id="framework" class="bg-stone-100/80 border-y border-stone-200/80 py-24">
+  <!-- Core Pillars -->
+  <section id="framework" class="bg-white border-y border-slate-200 py-24">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl">
         <h2 class="font-serif text-3xl text-brand-900 font-medium">Core Focus Areas</h2>
-        <p class="mt-3 text-stone-600">Structured support tailored to complex technical and organizational environments.</p>
+        <p class="mt-3 text-slate-600">Structured support tailored to complex technical and organizational environments.</p>
       </div>
 
       <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-brand-50 p-8 rounded-xl border border-stone-200/60 shadow-sm">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-semibold text-sm">01</div>
+        <!-- Pillar 1 -->
+        <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">01</div>
           <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Cognitive Capacity</h3>
-          <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
             Manage cognitive load, sharpen focus, and establish sustainable boundaries in demanding, fast-paced industries.
           </p>
         </div>
 
-        <div class="bg-brand-50 p-8 rounded-xl border border-stone-200/60 shadow-sm">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-semibold text-sm">02</div>
+        <!-- Pillar 2 -->
+        <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">02</div>
           <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Career Transitions</h3>
-          <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
             Navigate high-stakes technical interviews, leadership promotions, and organizational shifts with strategic confidence.
           </p>
         </div>
 
-        <div class="bg-brand-50 p-8 rounded-xl border border-stone-200/60 shadow-sm">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-semibold text-sm">03</div>
+        <!-- Pillar 3 -->
+        <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">03</div>
           <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Adaptive Leadership</h3>
-          <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
             Lead technical teams effectively by fostering psychological safety, clear communication, and resilience under strain.
           </p>
         </div>
@@ -113,24 +131,58 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="max-w-6xl mx-auto px-6 py-24">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="font-serif text-3xl sm:text-4xl text-brand-900 font-medium">Start the Conversation</h2>
-      <p class="mt-4 text-stone-600">
+      <p class="mt-4 text-slate-600">
         Reach out to discuss individual coaching or custom team workshops.
       </p>
     </div>
 
-    <div class="mt-12 max-w-xl mx-auto bg-white p-8 rounded-2xl border border-stone-200 shadow-sm">
+    <div class="mt-12 max-w-xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
       <form action="mailto:hello@buildingresilience.center" method="post" enctype="text/plain" class="space-y-6">
         <div>
-          <label class="block text-sm font-medium text-stone-700">Name</label>
-          <input type="text" name="name" required class="mt-2 w-full rounded-md border border-stone-300 px-4 py-2.5 text-stone-800 focus:border-brand-700 focus:ring-1 focus:ring-brand-700 outline-none" />
+          <label class="block text-sm font-medium text-slate-700">Name</label>
+          <input type="text" name="name" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-slate-800 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-stone-700">Email Address</label>
-          <input type="email" name="email" required class="mt-2 w-full rounded-md border border-stone-300 px-4 py-2.5 text-stone-800 focus:border-brand-700 focus:ring-1 focus:ring-brand-700 outline-none" />
+          <label class="block text-sm font-medium text-slate-700">Email Address</label>
+          <input type="email" name="email" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-slate-800 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-stone-700">How can I help?</label>
-          <textarea name="message" rows="4" required class="mt-2 w-full rounded-md border border-stone-300 px-4 py-2.5 text-stone
+          <label class="block text-sm font-medium text-slate-700">How can I help?</label>
+          <textarea name="message" rows="4" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-slate-800 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 px-6 rounded-md bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<!-- Footer -->
+  <footer class="border-t border-slate-800 bg-brand-900 text-slate-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <p class="text-sm">© 2026 Building Resilience. All rights reserved.</p>
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="mailto:hello@buildingresilience.center" class="hover:text-accent-500 transition-colors">hello@buildingresilience.center</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Netlify Identity Redirect Logic -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
