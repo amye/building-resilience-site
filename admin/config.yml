@@ -1,32 +1,62 @@
 backend:
   name: git-gateway
-  branch: main # or master
+  branch: main
 
-# Point to your Netlify site URL for authentication
-site_url: https://ornate-bombolone-f2065c.netlify.app/
-
-media_folder: "assets/images"                          # Where uploaded images go
+# Store uploaded images in assets/images
+media_folder: "assets/images"
 public_folder: "/assets/images"
 
+# Enable draft workflows (Drafts -> In Review -> Published)
+publish_mode: editorial_workflow
+
 collections:
+  # ==========================================
+  # 1. LANDING PAGE CONTENT COLLECTION
+  # ==========================================
   - name: "pages"
     label: "Pages"
+    delete: false # Prevent accidental deletion of the homepage content
     files:
-      - file: "content/home.json"
-        label: "Home Page Content"
-        name: "home"
+      - file: "content/homepage.json"
+        label: "Home Page"
+        name: "homepage"
         fields:
-          - { label: "Headline", name: "headline", widget: "string" }
-          - { label: "Subheadline", name: "subheadline", widget: "text" }
-          - { label: "Bio Text", name: "bio", widget: "markdown" }
+          # --- HERO SECTION ---
+          - { label: "Hero Eyebrow Badge", name: "hero_eyebrow", widget: "string", default: "Executive & Career Coaching" }
+          - { label: "Hero Title", name: "hero_title", widget: "string", default: "Cultivate sustainable clarity in high-pressure roles." }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text", default: "Evidence-backed frameworks designed to help leaders, software engineers, and founders navigate complexity, prevent burnout, and build enduring mental resilience." }
+          - { label: "Primary CTA Text", name: "hero_cta_primary_text", widget: "string", default: "Schedule Consultation" }
+          - { label: "Primary CTA Link", name: "hero_cta_primary_link", widget: "string", default: "#contact" }
+          - { label: "Secondary CTA Text", name: "hero_cta_secondary_text", widget: "string", default: "Explore the Approach" }
+          - { label: "Secondary CTA Link", name: "hero_cta_secondary_link", widget: "string", default: "#framework" }
 
-  - name: "blog"
-    label: "Insights"
-    folder: "content/blog"
+          # --- CORE FOCUS PILLARS ---
+          - { label: "Section 2 Title", name: "pillars_title", widget: "string", default: "Core Focus Areas" }
+          - { label: "Section 2 Subtitle", name: "pillars_subtitle", widget: "string", default: "Structured support tailored to complex technical and organizational environments." }
+          - label: "Focus Pillars"
+            name: "pillars"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Number Badge", name: "number", widget: "string", default: "01" }
+              - { label: "Pillar Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          # --- CONTACT SECTION ---
+          - { label: "Contact Section Title", name: "contact_title", widget: "string", default: "Start the Conversation" }
+          - { label: "Contact Section Subtitle", name: "contact_subtitle", widget: "text", default: "Reach out to discuss individual coaching or custom team workshops." }
+
+  # ==========================================
+  # 2. INSIGHTS / ARTICLES COLLECTION
+  # ==========================================
+  - name: "articles"
+    label: "Articles & Insights"
+    folder: "content/articles"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Summary / Excerpt", name: "summary", widget: "text" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
