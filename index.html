@@ -184,5 +184,39 @@
       });
     }
   </script>
+
+  <script>
+  async function loadPageContent() {
+    try {
+      const response = await fetch('/content/homepage.json');
+      if (!response.ok) return;
+      const data = await response.json();
+
+      // Populate Hero Section
+      if (data.hero_eyebrow) document.getElementById('hero-eyebrow').innerText = data.hero_eyebrow;
+      if (data.hero_title) document.getElementById('hero-title').innerText = data.hero_title;
+      if (data.hero_subtitle) document.getElementById('hero-subtitle').innerText = data.hero_subtitle;
+      if (data.hero_cta_primary_text) document.getElementById('cta-primary').innerText = data.hero_cta_primary_text;
+
+      // Populate Focus Pillars
+      if (data.pillars && Array.isArray(data.pillars)) {
+        const pillarContainer = document.getElementById('pillar-grid');
+        if (pillarContainer) {
+          pillarContainer.innerHTML = data.pillars.map(pillar => `
+            <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">${pillar.number || '01'}</div>
+              <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">${pillar.title}</h3>
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">${pillar.description}</p>
+            </div>
+          `).join('');
+        }
+      }
+    } catch (e) {
+      console.log('Using static fallbacks', e);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadPageContent);
+</script>
 </body>
 </html>

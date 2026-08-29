@@ -1,0 +1,30 @@
+{
+  "hero_eyebrow": "Executive & Career Coaching",
+  "hero_title": "Cultivate sustainable clarity in high-pressure roles.",
+  "hero_subtitle": "Evidence-backed frameworks designed to help leaders, software engineers, and founders navigate complexity, prevent burnout, and build enduring mental resilience.",
+  "hero_cta_primary_text": "Schedule Consultation",
+  "hero_cta_primary_link": "#contact",
+  "hero_cta_secondary_text": "Explore the Approach",
+  "hero_cta_secondary_link": "#framework",
+  "pillars_title": "Core Focus Areas",
+  "pillars_subtitle": "Structured support tailored to complex technical and organizational environments.",
+  "pillars": [
+    {
+      "number": "01",
+      "title": "Cognitive Capacity",
+      "description": "Manage cognitive load, sharpen focus, and establish sustainable boundaries in demanding, fast-paced industries."
+    },
+    {
+      "number": "02",
+      "title": "Career Transitions",
+      "description": "Navigate high-stakes technical interviews, leadership promotions, and organizational shifts with strategic confidence."
+    },
+    {
+      "number": "03",
+      "title": "Adaptive Leadership",
+      "description": "Lead technical teams effectively by fostering psychological safety, clear communication, and resilience under strain."
+    }
+  ],
+  "contact_title": "Start the Conversation",
+  "contact_subtitle": "Reach out to discuss individual coaching or custom team workshops."
+}
