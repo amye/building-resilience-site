@@ -1,7 +1,9 @@
 backend:
-  name: github
-  repo: amye/building-resilience-site                  # Replace with your repo path
-  branch: main                                         # Or master/gh-pages
+  name: git-gateway
+  branch: main # or master
+
+# Point to your Netlify site URL for authentication
+site_url: https://ornate-bombolone-f2065c.netlify.app/
 
 media_folder: "assets/images"                          # Where uploaded images go
 public_folder: "/assets/images"
