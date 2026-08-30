@@ -1,196 +1,271 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Building Resilience | Executive Coaching & Leadership</title>
-  
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Building Resilience | Executive Coaching & Leadership</title>
 <meta property="og:title" content="Building Resilience | Executive Coaching" />
 <meta property="og:description" content="Cultivate sustainable clarity in high-pressure technical roles." />
 <meta property="og:image" content="https://buildingresilience.center/assets/images/og-share.png" />
-<meta name="twitter:card" content="summary_large_image" />  
-  
-  <!-- Favicon Package -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Favicon Package -->
 <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
 <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png" />
 <link rel="shortcut icon" href="/assets/images/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#0f172a" /> 
+<meta name="theme-color" content="#0f172a" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Tailwind Typography Plugin (for Decap CMS markdown rendering) -->
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  
-  <!-- Google Fonts: Inter & Playfair Display -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN (single load, typography plugin included) -->
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
+<!-- Google Fonts: Inter & Playfair Display -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          serif: ['Playfair Display', 'serif'],
+        },
+        colors: {
+          brand: {
+            50: '#f4f6f8',
+            100: '#e3e8ee',
+            700: '#1e3a5f',
+            800: '#152a4a',
+            900: '#0a1f38',
           },
-          colors: {
-            brand: {
-              50: '#f4f6f8',
-              100: '#e3e8ee',
-              700: '#1e293b',
-              800: '#0f172a',
-              900: '#0b1120',
-            },
-            accent: {
-              500: '#ff6f61',
-              600: '#e05648',
-            }
+          accent: {
+            500: '#ff6f61',
+            600: '#e05648',
           }
         }
       }
     }
-  </script>
+  }
+</script>
 
-  <!-- Netlify Identity Widget for Decap CMS Invite Redirects -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- Netlify Identity Widget for Decap CMS Invite Redirects -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
-<body class="bg-brand-50 text-slate-800 antialiased font-sans">
+<body class="bg-brand-50 text-brand-900 antialiased font-sans">
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 bg-brand-50/90 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="font-serif text-xl font-semibold text-brand-900 tracking-tight">
-        Building Resilience
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 bg-brand-50/90 backdrop-blur-md border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="#" class="font-serif text-xl font-semibold text-brand-900 tracking-tight">
+      Building Resilience
+    </a>
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+      <a href="#about" class="hover:text-brand-800 transition-colors">About</a>
+      <a href="#framework" class="hover:text-brand-800 transition-colors">Framework</a>
+      <a href="#services" class="hover:text-brand-800 transition-colors">Services</a>
+      <a href="#contact" class="px-5 py-2.5 rounded-full bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
+        Get in Touch
       </a>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-        <a href="#about" class="hover:text-brand-800 transition-colors">About</a>
-        <a href="#framework" class="hover:text-brand-800 transition-colors">Framework</a>
-        <a href="#services" class="hover:text-brand-800 transition-colors">Services</a>
-        <a href="#contact" class="px-5 py-2.5 rounded-full bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
-          Get in Touch
-        </a>
-      </nav>
-    </div>
-  </header>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-6 pt-20 pb-24 md:pt-32 md:pb-36">
-    <div class="max-w-3xl">
-      <span class="text-xs uppercase tracking-widest font-semibold text-accent-500">Executive & Career Coaching</span>
-      <h1 class="mt-4 font-serif text-4xl sm:text-5xl md:text-6xl text-brand-900 font-medium leading-tight">
-        Cultivate sustainable clarity in high-pressure roles.
-      </h1>
-      <p class="mt-6 text-lg sm:text-xl text-slate-600 font-light leading-relaxed">
-        Evidence-backed frameworks designed to help leaders, software engineers, and founders navigate complexity, prevent burnout, and build enduring mental resilience.
+<!-- Hero Section -->
+<section class="max-w-6xl mx-auto px-6 pt-20 pb-24 md:pt-32 md:pb-36">
+  <div class="max-w-3xl">
+    <span id="hero-eyebrow" class="text-xs uppercase tracking-widest font-semibold text-accent-500">Executive & Career Coaching</span>
+    <h1 id="hero-title" class="mt-4 font-serif text-4xl sm:text-5xl md:text-6xl text-brand-900 font-medium leading-tight">
+      Cultivate sustainable clarity in high-pressure roles.
+    </h1>
+    <p id="hero-subtitle" class="mt-6 text-lg sm:text-xl text-slate-600 font-light leading-relaxed">
+      Coaching grounded in mediation, conflict resolution, and technical governance &mdash; helping leaders, software engineers, and founders navigate complexity, prevent burnout, and build enduring mental resilience.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+      <a id="cta-primary" href="#contact" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
+        Schedule Consultation
+      </a>
+      <a href="#framework" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg border border-slate-300 text-brand-800 font-medium hover:bg-white transition-colors">
+        Explore the Approach
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
+    <div class="md:col-span-2">
+      <img src="/assets/images/headshot.jpg" alt="Headshot" class="aspect-square w-full max-w-xs rounded-2xl object-cover border border-slate-200" />
+    </div>
+    <div class="md:col-span-3">
+      <span class="text-xs uppercase tracking-widest font-semibold text-accent-500">About</span>
+      <h2 class="mt-4 font-serif text-3xl sm:text-4xl text-brand-900 font-medium">
+        I've spent my career in the room when technical organizations hit their hardest moments.
+      </h2>
+      <p class="mt-6 text-slate-600 leading-relaxed">
+        Before coaching, I spent years in open source program leadership, including as Director
+        of Developer Programs at the Cloud Native Computing Foundation, where I helped steer
+        technical governance through periods of rapid growth and real conflict. I hold a J.D.
+        with a focus in mediation and conflict resolution, and I hold an LL.M in Cybercrime,
+        Cybersecurity, and International Law -  training that shapes how I coach engineers,
+        technical leads, and founders navigating pressure, ambiguity, and high-stakes decisions
+        in technical organizations.
       </p>
-      <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-        <a href="#contact" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
-          Schedule Consultation
-        </a>
-        <a href="#framework" class="inline-flex justify-center items-center px-6 py-3.5 rounded-lg border border-slate-300 text-brand-800 font-medium hover:bg-white transition-colors">
-          Explore the Approach
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Core Pillars -->
-  <section id="framework" class="bg-white border-y border-slate-200 py-24">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-2xl">
-        <h2 class="font-serif text-3xl text-brand-900 font-medium">Core Focus Areas</h2>
-        <p class="mt-3 text-slate-600">Structured support tailored to complex technical and organizational environments.</p>
-      </div>
-
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Pillar 1 -->
-        <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
-          <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">01</div>
-          <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Cognitive Capacity</h3>
-          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-            Manage cognitive load, sharpen focus, and establish sustainable boundaries in demanding, fast-paced industries.
-          </p>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
-          <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">02</div>
-          <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Career Transitions</h3>
-          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-            Navigate high-stakes technical interviews, leadership promotions, and organizational shifts with strategic confidence.
-          </p>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
-          <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">03</div>
-          <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Adaptive Leadership</h3>
-          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-            Lead technical teams effectively by fostering psychological safety, clear communication, and resilience under strain.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="max-w-6xl mx-auto px-6 py-24">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="font-serif text-3xl sm:text-4xl text-brand-900 font-medium">Start the Conversation</h2>
-      <p class="mt-4 text-slate-600">
-        Reach out to discuss individual coaching or custom team workshops.
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        I'm currently completing my ICF coaching certification through Newfield Network, working
+        toward PCC-level credentialing. That means the coaching relationship itself is a bit
+        different right now: sessions are offered at a reduced rate (or free, depending on scope)
+        in exchange for the practice hours I need -  and you get direct, attentive coaching
+        from someone actively immersed in the craft, not coasting on a credential earned years ago.
       </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <span class="px-4 py-2 rounded-full bg-brand-50 border border-slate-200 text-sm text-slate-600">ICF Candidate - Newfield Network</span>
+        <span class="px-4 py-2 rounded-full bg-brand-50 border border-slate-200 text-sm text-slate-600">J.D., Mediation -& Conflict Resolution</span>
+        <span class="px-4 py-2 rounded-full bg-brand-50 border border-slate-200 text-sm text-slate-600">LL.M., Cybercrime, Cybersecurity & International Law</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Pillars -->
+<section id="framework" class="bg-white border-y border-slate-200 py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-2xl">
+      <h2 class="font-serif text-3xl text-brand-900 font-medium">Core Focus Areas</h2>
+      <p class="mt-3 text-slate-600">Structured support tailored to complex technical and organizational environments.</p>
     </div>
 
-    <div class="mt-12 max-w-xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-      <form action="mailto:hello@buildingresilience.center" method="post" enctype="text/plain" class="space-y-6">
-        <div>
-          <label class="block text-sm font-medium text-slate-700">Name</label>
-          <input type="text" name="name" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-slate-800 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-slate-700">Email Address</label>
-          <input type="email" name="email" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-slate-800 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-slate-700">How can I help?</label>
-          <textarea name="message" rows="4" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-slate-800 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none"></textarea>
-        </div>
-        <button type="submit" class="w-full py-3.5 px-6 rounded-md bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
-          Send Message
-        </button>
-      </form>
+    <div id="pillar-grid" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Pillar 1 -->
+      <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">01</div>
+        <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Cognitive Capacity</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Manage cognitive load, sharpen focus, and establish sustainable boundaries in demanding, fast-paced industries.
+        </p>
+      </div>
+      <!-- Pillar 2 -->
+      <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">02</div>
+        <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Career Transitions</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Navigate high-stakes transitions, leadership promotions, and organizational shifts with strategic confidence.
+        </p>
+      </div>
+      <!-- Pillar 3 -->
+      <div class="bg-brand-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-900 flex items-center justify-center font-bold text-sm">03</div>
+        <h3 class="mt-6 font-serif text-xl font-medium text-brand-900">Conflict-Aware Leadership</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Lead technical teams through disagreement and ambiguity using mediation-trained techniques that build psychological safety and create durable alignment under strain.
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
+<!-- Services Section -->
+<section id="services" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="max-w-2xl">
+    <span class="text-xs uppercase tracking-widest font-semibold text-accent-500">Services</span>
+    <h2 class="mt-4 font-serif text-3xl text-brand-900 font-medium">Ways to work together</h2>
+    <p class="mt-3 text-slate-600">Flexibility for what you actually need.</p>
+  </div>
+
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+      <h3 class="font-serif text-xl font-medium text-brand-900">1:1 Coaching</h3>
+      <p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1">
+        Six 1-hour sessions, offered at a reduced rate as part of my ICF certification hours.
+      </p>
+      <p class="mt-6 text-sm font-semibold text-brand-800">Reduced rate -  part of ICF certification hours</p>
+    </div>
+    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+      <h3 class="font-serif text-xl font-medium text-brand-900">Team Workshops</h3>
+      <p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1">
+        A short-term engagement designed to springboard your team into action - typically run as an offsite.
+      </p>
+      <p class="mt-6 text-sm font-semibold text-brand-800">Custom pricing</p>
+    </div>
+    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+      <h3 class="font-serif text-xl font-medium text-brand-900">Fit Call</h3>
+      <p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1">
+        A free, no-pressure intro call to see if coaching together makes sense.
+      </p>
+      <p class="mt-6 text-sm font-semibold text-brand-800">Free - 30 min</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="font-serif text-3xl sm:text-4xl text-brand-900 font-medium">Start the Conversation</h2>
+    <p class="mt-4 text-slate-600">
+      Reach out to discuss individual coaching or custom team workshops.
+    </p>
+  </div>
+
+  <div class="mt-12 max-w-xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+    <!--
+      Switched from mailto: submission to Netlify Forms.
+      Requires: site is deployed on Netlify (it already is, per the Identity widget).
+      Netlify detects this form at build time because of data-netlify="true" + the
+      hidden "form-name" input. No backend code needed. Submissions show up under
+      Site settings > Forms in the Netlify dashboard, and you can wire up email
+      notifications there too.
+    -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <div>
+        <label class="block text-sm font-medium text-brand-800">Name</label>
+        <input type="text" name="name" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-brand-900 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-800">Email Address</label>
+        <input type="email" name="email" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-brand-900 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-800">How can I help?</label>
+        <textarea name="message" rows="4" required class="mt-2 w-full rounded-md border border-slate-300 px-4 py-2.5 text-brand-900 focus:border-brand-800 focus:ring-1 focus:ring-brand-800 outline-none"></textarea>
+      </div>
+      <button type="submit" class="w-full py-3.5 px-6 rounded-md bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors shadow-sm">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
 <!-- Footer -->
-  <footer class="border-t border-slate-800 bg-brand-900 text-slate-400 py-12">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <p class="text-sm">© 2026 Building Resilience. All rights reserved.</p>
-      <div class="flex items-center space-x-6 text-sm">
-        <a href="mailto:hello@buildingresilience.center" class="hover:text-accent-500 transition-colors">hello@buildingresilience.center</a>
-      </div>
+<footer class="border-t border-slate-800 bg-brand-900 text-slate-400 py-12">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <p class="text-sm">&copy; 2026 Building Resilience. All rights reserved.</p>
+    <div class="flex items-center space-x-6 text-sm">
+      <a href="mailto:hello@buildingresilience.center" class="hover:text-accent-500 transition-colors">hello@buildingresilience.center</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- Netlify Identity Redirect Logic -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
+<!-- Netlify Identity Redirect Logic -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
-  <script>
+<script>
   async function loadPageContent() {
     try {
       const response = await fetch('/content/homepage.json');
@@ -220,8 +295,8 @@
       console.log('Using static fallbacks', e);
     }
   }
-
   document.addEventListener('DOMContentLoaded', loadPageContent);
 </script>
+
 </body>
 </html>
